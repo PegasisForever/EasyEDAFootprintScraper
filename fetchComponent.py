@@ -107,7 +107,7 @@ def getComponentSymbol(componentDetail):
     for text in ["canvas", "BBox"]:
         sch["schematics"][0]["dataStr"][text] = componentDetail["dataStr"][text]
     
-    shape = "LIB~-5~5~package`" + componentDetail["packageDetail"]["title"] + "`BOM_Supplier`LCSC`BOM_Supplier Part`" + componentDetail["lcsc"]["number"] + "`BOM_Manufacturer`" + componentDetail["dataStr"]["head"]["c_para"]["BOM_Manufacturer"] + "`BOM_Manufacturer Part`" + componentDetail["dataStr"]["head"]["c_para"]["BOM_Manufacturer Part"] + "`Contributor`" + componentDetail["dataStr"]["head"]["c_para"]["Contributor"] + "`spicePre`" + componentDetail["dataStr"]["head"]["c_para"]["pre"][:-1] + "`spiceSymbolName`" + componentDetail["dataStr"]["head"]["c_para"]["name"] + "`~~0~gge03d9a0f3a4a33646~" + componentDetail["uuid"] + "~052918e6192f4a27891c8ca5941aa6aa~0~~yes~yes"
+    shape = "LIB~-5~5~package`" + componentDetail["packageDetail"]["title"] + "`BOM_Supplier`LCSC`BOM_Supplier Part`" + componentDetail["lcsc"]["number"] + "`BOM_Manufacturer`" + componentDetail["dataStr"]["head"]["c_para"]["BOM_Manufacturer"] + "`BOM_Manufacturer Part`" + componentDetail["dataStr"]["head"]["c_para"]["BOM_Manufacturer Part"] + "`Contributor`" + "Unknown" + "`spicePre`" + componentDetail["dataStr"]["head"]["c_para"]["pre"][:-1] + "`spiceSymbolName`" + componentDetail["dataStr"]["head"]["c_para"]["name"] + "`~~0~gge03d9a0f3a4a33646~" + componentDetail["uuid"] + "~052918e6192f4a27891c8ca5941aa6aa~0~~yes~yes"
     for line in componentDetail["dataStr"]["shape"]:
         shape += "#@$"
         shape += line
